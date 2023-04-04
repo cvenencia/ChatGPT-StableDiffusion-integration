@@ -13,6 +13,7 @@
         <h3>Prompt used to generate the image</h3>
         <pre>{{image_prompt}}</pre>
         {% if img_url %}
+        <a class="button" href="{{ img_url }}" download>Download this image</a>
         <img src="{{ img_url }}" alt="Generated image for the article" />
         {% else %}
         <p>

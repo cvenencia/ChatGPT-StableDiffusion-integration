@@ -48,8 +48,7 @@ pre {
     padding: 0.5em;
     font-family: 'Source Code Pro', monospace;
     white-space: pre-wrap;
-
-    font-size: 0.75rem;
+    font-size: 0.875rem;
 }
 
 textarea {
@@ -92,6 +91,12 @@ button:hover,
     display: flex;
     flex-direction: column;
     gap: 0.5em;
+}
+
+.result-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
 }
 
 .hide {
