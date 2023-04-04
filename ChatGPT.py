@@ -27,7 +27,7 @@ def enhance_article(article):
     return result
 
 
-def extract_takeaways_from_article(article):
+def generate_prompt_for_image_generation(article):
     print("Writing a summary of the article")
     response = openai.ChatCompletion.create(
         model=CHATGPT_MODEL,
