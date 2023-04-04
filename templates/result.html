@@ -1,0 +1,25 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container">
+    <div class="result-group">
+        <h2>Original Article</h2>
+        <pre>{{article}}</pre>
+    </div>
+    <div class="result-group">
+        <h2>Enhanced Article</h2>
+        <pre>{{enhanced}}</pre>
+    </div>
+    <div class="result-group">
+        <h2>Generated Image</h2>
+        <h3>Prompt used to generate the image</h3>
+        <pre>{{image_prompt}}</pre>
+        {% if img_url %}
+        <img src="{{ img_url }}" alt="Generated image for the article" />
+        {% else %}
+        <p>
+            There was an error generating the image. Most certainly it was
+            because of rate limiting. Try again in one hour.
+        </p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

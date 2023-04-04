@@ -1,0 +1,19 @@
+{% extends 'base.html' %} {% block content %}
+<script defer src="{{url_for('static', filename= 'js/index.js')}}"></script>
+<div class="container">
+    <div>
+        <h1>
+            Enhance the writing of an article and generate an image that
+            represents it
+        </h1>
+        <form action="/result" method="post">
+            <div class="input-group">
+                <label for="article">Article to enhance:</label>
+                <textarea name="article" id="article"></textarea>
+            </div>
+            <button type="submit">Enhance</button>
+            <div class="spinner hide"></div>
+        </form>
+    </div>
+</div>
+{% endblock %}
